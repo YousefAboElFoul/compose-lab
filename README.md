@@ -1,48 +1,53 @@
-📦 Docker Compose Interactive Lesson
+# 🚀 compose-lab
 
+[![Docker](https://img.shields.io/badge/Docker-24.x-blue?logo=docker)](https://www.docker.com/)
+[![Compose](https://img.shields.io/badge/Docker_Compose-v2-blue?logo=docker)](https://docs.docker.com/compose/)
+[![Bash](https://img.shields.io/badge/Bash-5.x-black?logo=gnubash)](https://www.gnu.org/software/bash/)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
+Interactive Bash script that teaches Docker Compose by building and running a real NGINX project step-by-step.
 
+---
 
+## 📦 What Is This?
 
+`compose-lab` is a hands-on learning tool.
 
+Instead of reading theory, you learn Docker Compose by:
 
+- Creating a real project
+- Running an NGINX container
+- Mapping ports
+- Mounting volumes
+- Viewing logs
+- Executing commands inside containers
+- Cleaning everything up
 
-An interactive Bash script that teaches Docker Compose by building and running a real NGINX website step-by-step.
+It pauses between steps and explains what’s happening.
 
-Instead of reading theory, users learn by doing.
+---
 
-🚀 What This Project Does
+## 🧠 Concepts Covered
 
-The script:
+This lab teaches:
 
-📁 Creates a real Docker Compose project
+- Structure of `docker-compose.yml`
+- Services
+- Images (`nginx:alpine`)
+- Port mapping (`8080:80`)
+- Volumes (bind mounts)
+- `docker compose up -d`
+- `docker compose ps`
+- `docker compose logs`
+- `docker compose exec`
+- `docker compose down`
+- Live file updates via volumes
 
-🌐 Runs an NGINX container
+---
 
-📦 Mounts volumes
+## 📂 Project Structure
 
-🔁 Demonstrates live file updates
-
-📊 Shows logs & container status
-
-🧠 Explains each command before running it
-
-🛑 Cleans up at the end
-
-It pauses between steps so learners can follow along comfortably.
-
-📸 Demo
-
-After running the script, users can visit:
-
-http://localhost:8080
-
-
-They will see:
-
-Hello from Docker Compose + NGINX 🚀
-
-📂 Project Structure
+```
 .
 ├── compose-lesson.sh
 ├── README.md
@@ -50,146 +55,131 @@ Hello from Docker Compose + NGINX 🚀
     ├── docker-compose.yml
     └── html/
         └── index.html
+```
 
-🧠 Concepts Covered
+---
 
-This interactive lesson teaches:
+## 🔧 Requirements
 
-docker-compose.yml structure
-
-Services
-
-Images (nginx:alpine)
-
-Port mapping (8080:80)
-
-Volumes (./html:/usr/share/nginx/html)
-
-Running containers (up -d)
-
-Viewing logs
-
-Executing commands inside containers
-
-Stopping containers (down)
-
-Live updates via bind mounts
-
-🔧 Requirements
-
-Docker 20+
-
-Docker Compose v2+
-
-Bash (Linux, macOS, or WSL)
+- Docker 20+
+- Docker Compose v2+
+- Bash (Linux, macOS, or WSL)
 
 Verify installation:
 
+```bash
 docker --version
 docker compose version
+```
 
-▶️ Quick Start
-1️⃣ Clone repository
-git clone https://github.com/YOUR_USERNAME/docker-compose-lesson.git
-cd docker-compose-lesson
+---
 
-2️⃣ Make script executable
+## ▶️ Quick Start
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/YousefAboElFoul/compose-lab.git
+cd compose-lab
+```
+
+### 2️⃣ Make script executable
+
+```bash
 chmod +x compose-lesson.sh
+```
 
-3️⃣ Run the lesson
+### 3️⃣ Run the lab
+
+```bash
 ./compose-lesson.sh
+```
 
+Or specify a custom project directory:
 
-Or specify a custom folder:
-
+```bash
 ./compose-lesson.sh my-project
+```
 
-🛑 Cleanup
+---
 
-If something is still running:
+## 🌍 Access the Website
 
+After running the script, open:
+
+```
+http://localhost:8080
+```
+
+You should see:
+
+```
+Hello from Docker Compose + NGINX 🚀
+```
+
+---
+
+## 🛑 Stop & Cleanup
+
+If needed:
+
+```bash
 docker compose down
+```
 
-🎯 Why This Exists
+---
 
-Most Docker tutorials:
+## 🎯 Why This Exists
 
-Show YAML
+Most Docker tutorials are passive.
 
-Explain theory
+`compose-lab` is:
 
-Don’t let users experience the system
+- Practical
+- Interactive
+- Beginner-friendly
+- DevOps-focused
+- Real-world oriented
 
-This project makes learning:
+It helps you understand **how and why Docker Compose works**, not just how to type commands.
 
-Interactive
+---
 
-Hands-on
+## 🛣 Roadmap
 
-Practical
+Planned improvements:
 
-Beginner-friendly
+- [ ] Dry-run mode
+- [ ] Multi-service example (API + NGINX)
+- [ ] Dockerfile build lesson
+- [ ] Environment variables demo
+- [ ] Networking demo
+- [ ] Healthcheck example
+- [ ] HTTPS example
+- [ ] CI/CD integration demo
 
-DevOps-focused
+---
 
-It’s ideal for:
-
-Students
-
-Junior DevOps engineers
-
-Developers transitioning to containers
-
-Bootcamps
-
-Self-learners
-
-🛣 Roadmap
-
-Future improvements:
-
- --dry-run mode
-
- Beginner quiz mode
-
- Multi-service example (API + NGINX)
-
- Dockerfile build lesson
-
- Environment variables demo
-
- Compose networking demo
-
- Healthcheck demo
-
- HTTPS example
-
- CI/CD GitHub Actions integration
-
-🤝 Contributing
+## 🤝 Contributing
 
 Pull requests are welcome.
 
-If you'd like to add:
+If you'd like to improve explanations or add advanced examples, feel free to open an issue or PR.
 
-New lesson modes
+---
 
-Improvements to clarity
-
-Advanced examples
-
-Feel free to open an issue or PR.
-
-📜 License
+## 📜 License
 
 MIT License
 
-⭐ If This Helped You
+---
 
-If you found this useful:
+## ⭐ Support
 
-⭐ Star the repo
+If this project helped you:
 
-🍴 Fork it
+- ⭐ Star the repo
+- 🍴 Fork it
+- 📢 Share it
 
-📢 Share it
+Happy learning 🚀
